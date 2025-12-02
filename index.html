@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>استبيان يومك</title>
+</head>
+<body>
+
+
+<audio id="backgroundMusic" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- زر التحكم بالموسيقى -->
+<button id="musicControl" onclick="toggleMusic()">🎵</button>
+
+<!-- شاشة البداية -->
+<div id="startScreen" style="position:fixed; inset:0; background:#f5efe6; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:20px; z-index:10; animation:fadeIn 0.6s ease;">
+  <h2 style="color:#5f4c40; margin-bottom:12px;">جاوبي على راحتك 🤍</h2>
+  <p style="color:#6d5f53; margin-bottom:20px; font-size:17px;">خدي وقتك وخليك مرتاحة، كله بسيط وسريع.</p>
+  <button onclick="startQuiz()" style="padding:12px 30px; background:#d8c7b6; border:none; border-radius:12px; font-size:18px; cursor:pointer; color:#4a3f36;">ابدئي الآن</button>
+</div>
+
+<div class="card" id="quizCard">
+  <div id="introScreen" class="intro">
+    <p>جاوبي على راحتك ❤️ خذي وقتك، ولا تحسي بأي ضغط.<br>كل إجابة بسيطة تساعدني نعرف إنك كويسه </p>
+    <button class="option-btn" onclick="startQuiz()">ابدئي</button>
+  </div>
+
+  <div id="quizContent" style="display:none;">
+    <div id="progressBarContainer"><div id="progressBar"></div></div>
+    <div id="content"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
